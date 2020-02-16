@@ -7,7 +7,8 @@ import { AppComponent } from './app.component';
 import { NgxQRCodeModule } from 'ngx-qrcode2';
 import { NgQrScannerModule } from 'angular2-qrscanner';
 import {
-  LoginComponent, RegisterComponent, HomeComponent, QrCodeGeneratorComponent, QrScannerDecoderComponent, PaymentComponent
+  LoginComponent, RegisterComponent, HomeComponent, QrCodeGeneratorComponent,
+  QrScannerDecoderComponent, PaymentComponent, PymentCompleteComponent
 } from './components';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { Interceptor } from './services/auth/interceptors';
@@ -20,6 +21,7 @@ import { Interceptor } from './services/auth/interceptors';
     QrCodeGeneratorComponent,
     QrScannerDecoderComponent,
     PaymentComponent,
+    PymentCompleteComponent,
     HomeComponent
   ],
   imports: [

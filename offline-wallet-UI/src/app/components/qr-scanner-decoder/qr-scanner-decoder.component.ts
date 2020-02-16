@@ -1,7 +1,7 @@
 import { Component, OnInit,ViewChild, ViewEncapsulation } from '@angular/core';
 
 import {QrScannerComponent} from 'angular2-qrscanner';
-import { Router } from '@angular/router';
+import { Router , NavigationExtras} from '@angular/router';
 
 @Component({
   selector: 'app-qr-scanner-decoder',
@@ -42,7 +42,10 @@ public qrcodeResult:any;
 
     this.qrScannerComponent.capturedQr.subscribe(result => {
         console.log(result);
-        this.router.navigate(['/QrCodeGenerator']);
+        const navigationExtras: NavigationExtras = {
+          state: result
+        };
+        this.router.navigate(['/PymentComplete'], navigationExtras);
         this.qrcodeResult = result;
     });
 }
