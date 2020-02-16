@@ -3,3 +3,7 @@ export * from './register/register.component';
 export * from './qr-code-generator/qr-code-generator.component';
 export * from './qr-scanner-decoder/qr-scanner-decoder.component';
 export * from './home/home.component';
+export * from './payment/payment.component';
+
+
+

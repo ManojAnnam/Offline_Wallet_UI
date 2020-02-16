@@ -1,5 +1,6 @@
-export class User {
-    id: number;
+import { Base } from './base';
+
+export class User extends Base {
     username: string;
     password: string;
     firstName: string;
