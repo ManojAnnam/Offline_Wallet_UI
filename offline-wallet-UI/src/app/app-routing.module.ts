@@ -1,9 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { QrCodeGeneratorComponent } from './components/qr-code-generator/qr-code-generator.component';
+import { LoginComponent, RegisterComponent, HomeComponent,QrCodeGeneratorComponent } from './components';
 
 const routes: Routes = [
-  { path: 'QrCodeGenerator', component: QrCodeGeneratorComponent }
+
+  { path: '', component: HomeComponent }, // , canActivate: [AuthGuard]
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'QrCodeGenerator', component: QrCodeGeneratorComponent },
+
+  // otherwise redirect to home
+  { path: '**', redirectTo: '' }
 ];
 
 @NgModule({

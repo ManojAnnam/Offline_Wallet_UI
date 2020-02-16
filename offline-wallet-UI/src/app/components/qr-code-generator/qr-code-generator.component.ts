@@ -7,16 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QrCodeGeneratorComponent  {
   // tslint:disable-next-line: ban-types
-  WalletAmount: Number = 100;
+  WalletAmount: number = 100;
   // tslint:disable-next-line: ban-types
-  AmounToBePaid: Number;
+  AmounToBePaid: number;
   title = 'generate-qrcode';
   elementType: 'url' | 'canvas' | 'img' = 'url';
   value: string;
   display = false;
   href: string;
   generateQRCode() {
-    if (!this.AmounToBePaid) {
+    if (!this.AmounToBePaid || isNaN(this.AmounToBePaid)) {
       this.display = false;
       alert('Please enter the name');
       return;
