@@ -1,6 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LoginComponent, RegisterComponent, HomeComponent, QrCodeGeneratorComponent, PaymentComponent } from './components';
+
+import {
+  LoginComponent, RegisterComponent, HomeComponent, QrCodeGeneratorComponent, PaymentComponent, QrScannerDecoderComponent
+} from './components';
+
 
 const routes: Routes = [
 
@@ -9,6 +13,7 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'payment', component: PaymentComponent },
   { path: 'new-payment', component: QrCodeGeneratorComponent },
+  { path: 'accept-payment', component: QrScannerDecoderComponent },
 
   // otherwise redirect to home
   { path: '**', redirectTo: '' }
