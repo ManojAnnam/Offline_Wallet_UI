@@ -6,12 +6,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { NgxQRCodeModule } from 'ngx-qrcode2';
 import { NgQrScannerModule } from 'angular2-qrscanner';
-import {
-  LoginComponent, RegisterComponent, HomeComponent, QrCodeGeneratorComponent,
-  QrScannerDecoderComponent, PaymentComponent, PymentCompleteComponent
-} from './components';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { Interceptor } from './services/auth/interceptors';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+import { QrCodeGeneratorComponent } from './components/qr-code-generator/qr-code-generator.component';
+import { QrScannerDecoderComponent } from './components/qr-scanner-decoder/qr-scanner-decoder.component';
+import { PaymentComponent } from './components/payment/payment.component';
+import { PymentCompleteComponent } from './components/PymentComplete/PymentComplete.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [

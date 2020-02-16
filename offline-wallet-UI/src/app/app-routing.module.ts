@@ -1,10 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import {
-  LoginComponent, RegisterComponent, HomeComponent, QrCodeGeneratorComponent, PaymentComponent, QrScannerDecoderComponent, PymentCompleteComponent
-} from './components';
 import { AuthGuard } from './services/auth/auth.guard';
+import { HomeComponent } from './components/home/home.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+import { PaymentComponent } from './components/payment/payment.component';
+import { QrCodeGeneratorComponent } from './components/qr-code-generator/qr-code-generator.component';
+import { QrScannerDecoderComponent } from './components/qr-scanner-decoder/qr-scanner-decoder.component';
+import { PymentCompleteComponent } from './components/PymentComplete/PymentComplete.component';
 
 
 const routes: Routes = [
