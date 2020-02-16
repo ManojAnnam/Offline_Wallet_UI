@@ -6,8 +6,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { NgxQRCodeModule } from 'ngx-qrcode2';
 import { NgQrScannerModule } from 'angular2-qrscanner';
-import { 
-  LoginComponent, RegisterComponent, HomeComponent, QrCodeGeneratorComponent, QrScannerDecoderComponent, PaymentComponent
+import {
+  LoginComponent, RegisterComponent, HomeComponent, QrCodeGeneratorComponent, QrScannerDecoderComponent, PaymentComponent,PymentCompleteComponent
 } from './components';
 import {  } from './services';
 
@@ -19,6 +19,7 @@ import {  } from './services';
     QrCodeGeneratorComponent,
     QrScannerDecoderComponent,
     PaymentComponent,
+    PymentCompleteComponent,
     HomeComponent
   ],
   imports: [
