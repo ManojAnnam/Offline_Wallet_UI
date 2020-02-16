@@ -5,9 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { NgxQRCodeModule } from 'ngx-qrcode2';
-import { LoginComponent, RegisterComponent, QrCodeGeneratorComponent } from './components';
+import { LoginComponent, RegisterComponent, QrCodeGeneratorComponent,QrScannerDecoderComponent } from './components';
 import {  } from './services';
 import { HomeComponent } from './components/home/home.component';
+import { NgQrScannerModule } from 'angular2-qrscanner';
+
+
 
 @NgModule({
   declarations: [
@@ -15,6 +18,7 @@ import { HomeComponent } from './components/home/home.component';
     LoginComponent,
     RegisterComponent,
     QrCodeGeneratorComponent,
+    QrScannerDecoderComponent,
     HomeComponent
   ],
   imports: [
@@ -22,6 +26,7 @@ import { HomeComponent } from './components/home/home.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    NgQrScannerModule,
     NgxQRCodeModule
   ],
   providers: [],
