@@ -1,4 +1,5 @@
-<div style="text-align:center">
+
+<div class="text-center">
   <input type="text" placeholder="Enter amount to generate QR Code" [(ngModel)]="AmounToBePaid"><br>
   <button (click)="generateQRCode()">Generate QR Code</button>
   <ngx-qrcode *ngIf="display" id="qrCodeImage" [qrc-element-type]="elementType" [qrc-value] = "value">
