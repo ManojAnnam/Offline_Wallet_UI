@@ -1,0 +1,10 @@
+<div style="text-align:center">
+  <input type="text" placeholder="Enter amount to generate QR Code" [(ngModel)]="AmounToBePaid"><br>
+  <button (click)="generateQRCode()">Generate QR Code</button>
+  <ngx-qrcode *ngIf="display" id="qrCodeImage" [qrc-element-type]="elementType" [qrc-value] = "value">
+  </ngx-qrcode><br>
+
+
+
+  <a [href]="href" *ngIf="display" (click)="downloadImage()" download>Download Image</a>
+</div>
