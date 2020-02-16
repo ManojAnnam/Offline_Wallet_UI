@@ -4,18 +4,18 @@ import { Routes, RouterModule } from '@angular/router';
 import {
   LoginComponent, RegisterComponent, HomeComponent, QrCodeGeneratorComponent, PaymentComponent, QrScannerDecoderComponent
 } from './components';
+import { AuthGuard } from './services/auth/auth.guard';
 
 
 const routes: Routes = [
 
-  { path: '', component: HomeComponent }, // , canActivate: [AuthGuard]
+  { path: '', component: HomeComponent, canActivate: [AuthGuard] },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'payment', component: PaymentComponent },
-  { path: 'new-payment', component: QrCodeGeneratorComponent },
-  { path: 'accept-payment', component: QrScannerDecoderComponent },
+  { path: 'payment', component: PaymentComponent, canActivate: [AuthGuard] },
+  { path: 'new-payment', component: QrCodeGeneratorComponent, canActivate: [AuthGuard] },
+  { path: 'accept-payment', component: QrScannerDecoderComponent, canActivate: [AuthGuard] },
 
-  // otherwise redirect to home
   { path: '**', redirectTo: '' }
 ];
 

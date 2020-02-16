@@ -24,5 +24,6 @@
             </button>
             <a routerLink="/register" class="btn btn-link">Register</a>
         </div>
+        <div *ngIf="error" class="alert alert-danger">{{error.message}}</div>
     </form>
 </div>

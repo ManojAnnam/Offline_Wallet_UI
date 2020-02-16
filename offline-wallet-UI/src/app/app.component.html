@@ -1,4 +1,26 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div class="container-fluid py-3">
-    <router-outlet></router-outlet>
-</div>
+<style>
+    .m-r-20 {
+      margin-right: 20px;
+    }
+  </style>
+  <nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="currentUser">
+    <div class="navbar-nav">
+        <a class="nav-item nav-link m-r-20" routerLink="/home">Home</a>
+        <a class="nav-item nav-link" routerLink="/" (click)="logout()">Logout</a>
+    </div>
+  </nav>
+  <div style="text-align:center">
+    <h1>
+      Welcome to {{ title }}
+    </h1>
+  </div>
+  <div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+  </div>
+  

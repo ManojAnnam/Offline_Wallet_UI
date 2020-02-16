@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
-
-import { AlertService, UserService, AuthenticationService } from '../../services';
+import { AuthenticationService } from 'src/app/services/auth/authentication.service';
+import { AlertService } from 'src/app/services/alert.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   templateUrl: 'register.component.html',
@@ -21,10 +22,6 @@ export class RegisterComponent implements OnInit {
     private userService: UserService,
     private alertService: AlertService
   ) {
-    // redirect to home if already logged in
-    // if (this.authenticationService.currentUserValue) {
-    //   this.router.navigate(['/']);
-    // }
   }
 
   ngOnInit() {

@@ -6,10 +6,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { NgxQRCodeModule } from 'ngx-qrcode2';
 import { NgQrScannerModule } from 'angular2-qrscanner';
-import { 
+import {
   LoginComponent, RegisterComponent, HomeComponent, QrCodeGeneratorComponent, QrScannerDecoderComponent, PaymentComponent
 } from './components';
-import {  } from './services';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { Interceptor } from './services/auth/interceptors';
 
 @NgModule({
   declarations: [
@@ -27,9 +28,12 @@ import {  } from './services';
     FormsModule,
     ReactiveFormsModule,
     NgQrScannerModule,
-    NgxQRCodeModule
+    NgxQRCodeModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: Interceptor, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
